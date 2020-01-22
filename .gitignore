@@ -67,3 +67,7 @@ public
 .contentful.json
 .env*
 !.env.example
+
+
+# editor
+.vscode/
