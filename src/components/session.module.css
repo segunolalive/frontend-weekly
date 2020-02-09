@@ -5,6 +5,10 @@
   justify-content: space-between;
 }
 
+.wrapper p {
+  margin-top: 0;
+}
+
 .title {
   font-size: 1.25em;
   font-weight: 500;
