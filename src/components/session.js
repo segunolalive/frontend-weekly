@@ -6,6 +6,11 @@ export default function FBEmbed({ url, title, date, slides }) {
     <article className={styles.wrapper}>
       <h3 className={styles.title}>{title}</h3>
       <p>{new Date(date).toDateString()}</p>
+      {slides && (
+        <a href={slides} target="_blank" rel="nofollow noopener">
+          Slides
+        </a>
+      )}
       <div
         className={`${styles.video} fb-video`}
         data-href={url}
@@ -13,11 +18,6 @@ export default function FBEmbed({ url, title, date, slides }) {
         data-show-text="false"
         data-allowfullscreen="true"
       />
-      {slides && (
-        <a href={slides} target="_blank" rel="nofollow noopener">
-          Slides
-        </a>
-      )}
     </article>
   )
 }
