@@ -1,8 +1,7 @@
 import React from 'react'
-import { Link } from 'gatsby'
+import Helmet from 'react-helmet'
 import base from './base.css'
 import Container from './container'
-import Navigation from './navigation'
 
 class Template extends React.Component {
   render() {
@@ -16,7 +15,13 @@ class Template extends React.Component {
 
     return (
       <Container>
-        <Navigation />
+        <Helmet>
+          <script
+            async
+            defer
+            src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.2"
+          ></script>
+        </Helmet>
         {children}
       </Container>
     )
