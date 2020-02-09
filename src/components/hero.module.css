@@ -3,6 +3,9 @@
   background: #000;
   color: #fff;
   text-align: center;
+
+  height: 61.8vh;
+  max-height: 400px;
 }
 
 .heroImage {
