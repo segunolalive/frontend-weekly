@@ -6,6 +6,9 @@
 
   height: 61.8vh;
   max-height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .heroImage {
@@ -18,22 +21,18 @@
 }
 
 .heroDetails {
-  position: absolute;
   background: rgba(0, 0, 0, 0.7);
-  left: 50%;
-  bottom: 0;
-  transform: translate(-50%, 0);
   font-size: 14px;
   padding: 0 0.5em;
 }
 
-@media(min-width: 600px) {
+@media (min-width: 600px) {
   .heroDetails {
     font-size: 16px;
   }
 }
 
-@media(min-width: 1000px) {
+@media (min-width: 1000px) {
   .heroDetails {
     font-size: 20px;
   }
