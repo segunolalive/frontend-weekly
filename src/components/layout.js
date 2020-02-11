@@ -2,6 +2,7 @@ import React from 'react'
 import Helmet from 'react-helmet'
 import base from './base.css'
 import Container from './container'
+import SEO from './SEO'
 
 class Template extends React.Component {
   render() {
@@ -15,7 +16,9 @@ class Template extends React.Component {
 
     return (
       <Container>
+        <SEO />
         <Helmet>
+          <link rel="icon" type="image/png" href="fw.png" />
           <script
             async
             defer

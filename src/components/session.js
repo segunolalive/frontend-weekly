@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from './session.module.css'
 
-export default function FBEmbed({ url, title, date, slides }) {
+export default function Session({ url, title, date, slides }) {
   return (
     <article className={styles.wrapper}>
       <h3 className={styles.title}>{title}</h3>

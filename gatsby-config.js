@@ -19,7 +19,11 @@ if (!spaceId || !accessToken) {
 module.exports = {
   siteMetadata: {
     title: 'Front-End Weekly',
+    description: 'Everything front-end development. From zero to hero',
+    url: 'https://frontendweekly.dev', // No trailing slash allowed!
+    image: '/fw.png', // Path to your image you placed in the 'static' folder
   },
+
   pathPrefix: '/gatsby-contentful-starter',
   plugins: [
     'gatsby-transformer-remark',
