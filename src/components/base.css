@@ -1,23 +1,13 @@
-@font-face {
-  font-family: 'Avenir';
-  font-weight: 400;
-  font-style: normal;
-  src: url('/avenir-400.woff2') format('woff2');
-  font-display: swap;
-}
+@import 'font.css';
+@import 'variables.css';
 
 body {
-  font-family: 'Avenir', Tahoma, Arial, Helvetica, sans-serif;
+  font-family: 'Circular Std', Tahoma, Arial, Helvetica, sans-serif;
   font-size: 1em;
   line-height: 1.65;
   color: #373f49;
   background: #eee;
   margin: 0;
-}
-
-img {
-  display: block;
-  width: 100%;
 }
 
 h1,
@@ -72,3 +62,17 @@ a {
 .list-inline li {
   display: inline-block;
 }
+
+.container {
+  margin: auto;
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 0.5rem;
+}
+
+@media screen and (min-width: 801px) {
+  .container {
+    padding: 0 1rem;
+  }
+}
+

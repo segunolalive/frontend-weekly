@@ -1,13 +1,19 @@
 import React from 'react'
-import Img from 'gatsby-image'
+
+import Header from './header'
 
 import styles from './hero.module.css'
 
 export default () => (
-  <header className={styles.hero}>
-    <div className={styles.heroDetails}>
-      <h1 className={styles.heroHeadline}>Front-End Weekly</h1>
-      <p>all things front-end development</p>
+  <>
+    <Header />
+    <div className={styles.hero}>
+      <div className="container">
+        <h1 className={styles.title}>Weekly video casts on Frontend Engineering</h1>
+        <p className={styles.subtitle}>
+          Get insights and nuggets from experienced engineers and designers!
+        </p>
+      </div>
     </div>
-  </header>
+  </>
 )
