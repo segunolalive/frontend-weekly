@@ -1,0 +1,27 @@
+.verticallyCenter {
+  display: flex;
+  align-items: center;
+}
+
+.header {
+  composes: verticallyCenter;
+  border-bottom: var(--few-border);
+  height: 60px;
+  width: 100%;
+}
+
+@media screen and (min-width: 801px) {
+  .header {
+    height: 110px;
+  }
+}
+
+.link {
+  composes: verticallyCenter;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.logo {
+  margin-right: .5rem;
+}
