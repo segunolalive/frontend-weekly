@@ -1,12 +1,12 @@
 @import 'font.css';
 @import 'variables.css';
+@import 'typography.css';
 
 body {
   font-family: 'Circular Std', Tahoma, Arial, Helvetica, sans-serif;
   font-size: 1em;
   line-height: 1.65;
-  color: #373f49;
-  background: #eee;
+  color: var(--few-black);
   margin: 0;
 }
 
@@ -47,7 +47,7 @@ a {
   font-size: 1.5rem;
   padding: 0 0 0.4em 0;
   margin: 0 0 5vmin 0;
-  border-bottom: 1px solid #ddd;
+  border-block-end: 1px solid #ddd;
 }
 
 /**
@@ -62,17 +62,3 @@ a {
 .list-inline li {
   display: inline-block;
 }
-
-.container {
-  margin: auto;
-  width: 100%;
-  max-width: 1200px;
-  padding: 0 0.5rem;
-}
-
-@media screen and (min-width: 801px) {
-  .container {
-    padding: 0 1rem;
-  }
-}
-

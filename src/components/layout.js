@@ -1,7 +1,6 @@
 import React from 'react'
-import {Helmet} from 'react-helmet'
+import { Helmet } from 'react-helmet'
 import base from './base.css'
-import Container from './container'
 import SEO from './SEO'
 
 class Template extends React.Component {
@@ -15,7 +14,7 @@ class Template extends React.Component {
     }
 
     return (
-      <Container>
+      <div>
         <SEO />
         <Helmet>
           <link rel="icon" type="image/png" href="fw_logo.png" />
@@ -26,7 +25,7 @@ class Template extends React.Component {
           ></script>
         </Helmet>
         {children}
-      </Container>
+      </div>
     )
   }
 }

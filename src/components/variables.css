@@ -1,3 +1,14 @@
 :root {
-  --few-border: 1px solid #e9f0f0;
+  /* colors */
+  --few-primary: #00cc6b;
+  --few-grey: #e9f0f0;
+  --few-white: #ffffff;
+  --few-black: #163225;
+
+  /* utilities */
+
+  /* borders  */
+  --few-border-1: 1px solid var(--few-grey);
+  --few-border-2: 2px solid var(--few-grey);
+
 }

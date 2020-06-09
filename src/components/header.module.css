@@ -5,7 +5,7 @@
 
 .header {
   composes: verticallyCenter;
-  border-bottom: var(--few-border);
+  border-block-end: var(--few-border-1);
   height: 60px;
   width: 100%;
 }
@@ -23,5 +23,5 @@
 }
 
 .logo {
-  margin-right: .5rem;
+  margin-right: 0.5rem;
 }
