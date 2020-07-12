@@ -8,7 +8,7 @@ import Layout from '../components/layout'
 import SessionList from '../components/sessionList'
 import Container from '../components/common/container'
 
-export default function Index(props) {
+export default function HomePage(props) {
   const siteTitle = get(props, 'data.site.siteMetadata.title')
   const sessions = get(props, 'data.allContentfulSession.edges')
 

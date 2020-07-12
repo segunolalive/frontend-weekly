@@ -11,11 +11,13 @@ import styles from './sessionTemplate.module.css'
 
 export default function SessionTemplate({ data, ...props }) {
   const { sessionDate, slides, title, videoUrl } = data.contentfulSession
-  const siteTitle = get(props, 'data.site.siteMetadata.title')
+  const siteTitle = get(data, 'site.siteMetadata.title')
+
+  const pageTitle = `${siteTitle} | ${title}`
 
   return (
     <Layout location={props.location}>
-      <Helmet title={siteTitle} />
+      <Helmet title={pageTitle} />
       <Container as="main" id="main-content">
         <div className={styles.all}>
           <article className={styles.wrapper}>

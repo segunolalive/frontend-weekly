@@ -1,6 +1,6 @@
 import React from 'react'
 import { Helmet } from 'react-helmet'
-import base from './base.css'
+import './base.css'
 import SEO from './SEO'
 import Header from './header'
 
@@ -14,10 +14,10 @@ export default function Layout (props) {
     }
 
     return (
-      <div class="page">
+      <div className="page">
         <SEO />
         <Helmet>
-          <link rel="icon" type="image/png" href="fw_logo.png" />
+          <link rel="icon" type="image/png" href="/fw_logo.png" />
           <script
             async
             defer
