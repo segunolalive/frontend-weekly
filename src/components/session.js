@@ -1,23 +1,25 @@
 import React from 'react'
+import Play from '../../static/Play.svg'
+
 import styles from './session.module.css'
 
-export default function Session({ url, title, date, slides }) {
+export default function Session({ slug, title, date, image }) {
   return (
-    <article className={styles.wrapper}>
-      <h3 className={styles.title}>{title}</h3>
-      {slides && (
-        <a href={slides} target="_blank" rel="nofollow noopener">
-          Slides
-        </a>
-      )}
-      <p>{new Date(date).toDateString()}</p>
-      <div
-        className={`${styles.video} fb-video`}
-        data-href={url}
-        data-width="500"
-        data-show-text="false"
-        data-allowfullscreen="true"
-      />
-    </article>
+    <div
+      className={styles.wrapper}
+      style={{ backgroundImage: `url(${image})` }}
+    >
+      <article className={styles.session}>
+        <time className={styles.time}>{new Date(date).toDateString()}</time>
+        <h3 className={styles.title}>
+          <a href={`/sessions/${slug}`} className={styles.strechedLink}>
+            {title}
+          </a>
+        </h3>
+        <button className={styles.btn}>
+          <img src={Play} alt="" />
+        </button>
+      </article>
+    </div>
   )
 }

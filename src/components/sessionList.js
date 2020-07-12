@@ -8,15 +8,15 @@ import styles from './sessionList.module.css'
 export default function SessionList({ sessions }) {
   return (
     <Container>
-      <ul className="article-list">
+      <ul className={styles.sessionList}>
         {sessions.map(({ node }) => {
-          const { id, title, videoUrl, sessionDate, slides } = node
+          const { title, slug, sessionDate, image = '/fw-video-bg.png' } = node
           return (
-            <li key={id}>
+            <li key={slug}>
               <Session
-                url={videoUrl}
+                slug={slug}
                 title={title}
-                slides={slides}
+                image={image}
                 date={sessionDate}
               />
             </li>

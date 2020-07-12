@@ -10,7 +10,7 @@ export default function Header () {
     <header className={styles.header}>
       <Container>
         <Link to="/" className={styles.link}>
-          <img src="fw_logo.svg" alt="logo" className={styles.logo} /> Frontend
+          <img src="/fw_logo.svg" alt="logo" className={styles.logo} /> Frontend
           Weekly
         </Link>
       </Container>

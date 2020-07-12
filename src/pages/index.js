@@ -8,25 +8,21 @@ import Layout from '../components/layout'
 import SessionList from '../components/sessionList'
 import Container from '../components/common/container'
 
-class RootIndex extends React.Component {
-  render() {
-    const siteTitle = get(this, 'props.data.site.siteMetadata.title')
-    const sessions = get(this, 'props.data.allContentfulSession.edges')
+export default function Index(props) {
+  const siteTitle = get(props, 'data.site.siteMetadata.title')
+  const sessions = get(props, 'data.allContentfulSession.edges')
 
-    return (
-      <Layout location={this.props.location}>
-          <Helmet title={siteTitle} />
-          <Hero />
-          <Container as="main" id="main-content">
-            <SessionList sessions={sessions} />
-          </Container>
-          <Footer />
-      </Layout>
-    )
-  }
+  return (
+    <Layout location={props.location}>
+      <Helmet title={siteTitle} />
+      <Hero />
+      <Container as="main" id="main-content">
+        <SessionList sessions={sessions} />
+      </Container>
+      <Footer />
+    </Layout>
+  )
 }
-
-export default RootIndex
 
 export const pageQuery = graphql`
   query HomeQuery {
@@ -38,11 +34,9 @@ export const pageQuery = graphql`
     allContentfulSession(sort: { fields: [sessionDate], order: DESC }) {
       edges {
         node {
-          id
+          slug
           title
-          videoUrl
           sessionDate
-          slides
         }
       }
     }

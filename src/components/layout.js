@@ -2,10 +2,10 @@ import React from 'react'
 import { Helmet } from 'react-helmet'
 import base from './base.css'
 import SEO from './SEO'
+import Header from './header'
 
-class Template extends React.Component {
-  render() {
-    const { location, children } = this.props
+export default function Layout (props) {
+    const { location, children } = props
     let header
 
     let rootPath = `/`
@@ -14,7 +14,7 @@ class Template extends React.Component {
     }
 
     return (
-      <div>
+      <div class="page">
         <SEO />
         <Helmet>
           <link rel="icon" type="image/png" href="fw_logo.png" />
@@ -24,10 +24,8 @@ class Template extends React.Component {
             src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.2"
           ></script>
         </Helmet>
+        <Header />
         {children}
       </div>
     )
   }
-}
-
-export default Template
