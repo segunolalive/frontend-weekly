@@ -23,7 +23,7 @@ module.exports = {
     title: 'Front-End Weekly',
     description: 'Everything front-end development. From zero to hero',
     url: 'https://frontendweekly.dev', // No trailing slash allowed!
-    image: '/fw_logo.png', // Path to your image you placed in the 'static' folder
+    image: '/fw_logo_large.png', // Path to your image you placed in the 'static' folder
   },
 
   pathPrefix: '/gatsby-contentful-starter',
