@@ -1,47 +1,28 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import get from 'lodash/get'
-import Helmet from 'react-helmet'
+import { Helmet } from 'react-helmet'
 import Hero from '../components/hero'
+import Footer from '../components/footer'
 import Layout from '../components/layout'
+import SessionList from '../components/sessionList'
+import Container from '../components/common/container'
 
-import Session from '../components/session'
+export default function HomePage(props) {
+  const siteTitle = get(props, 'data.site.siteMetadata.title')
+  const sessions = get(props, 'data.allContentfulSession.edges')
 
-class RootIndex extends React.Component {
-  render() {
-    const siteTitle = get(this, 'props.data.site.siteMetadata.title')
-    const sessions = get(this, 'props.data.allContentfulSession.edges')
-
-    return (
-      <Layout location={this.props.location}>
-        <div style={{ background: '#fff' }}>
-          <Helmet title={siteTitle} />
-          <Hero />
-          <div className="wrapper">
-            <h2 className="section-headline">Recent videos</h2>
-            <ul className="article-list">
-              {sessions.map(({ node }) => {
-                const { id, title, videoUrl, sessionDate, slides } = node
-                return (
-                  <li key={id}>
-                    <Session
-                      url={videoUrl}
-                      title={title}
-                      slides={slides}
-                      date={sessionDate}
-                    />
-                  </li>
-                )
-              })}
-            </ul>
-          </div>
-        </div>
-      </Layout>
-    )
-  }
+  return (
+    <Layout location={props.location}>
+      <Helmet title={siteTitle} />
+      <Hero />
+      <Container as="main" id="main-content">
+        <SessionList sessions={sessions} />
+      </Container>
+      <Footer />
+    </Layout>
+  )
 }
-
-export default RootIndex
 
 export const pageQuery = graphql`
   query HomeQuery {
@@ -53,11 +34,9 @@ export const pageQuery = graphql`
     allContentfulSession(sort: { fields: [sessionDate], order: DESC }) {
       edges {
         node {
-          id
+          slug
           title
-          videoUrl
           sessionDate
-          slides
         }
       }
     }

@@ -1,3 +1,5 @@
+const path = require(`path`)
+
 require('dotenv').config({
   path: `.env.${process.env.NODE_ENV}`,
 })
@@ -21,15 +23,23 @@ module.exports = {
     title: 'Front-End Weekly',
     description: 'Everything front-end development. From zero to hero',
     url: 'https://frontendweekly.dev', // No trailing slash allowed!
-    image: '/fw.png', // Path to your image you placed in the 'static' folder
+    image: '/fw_logo_large.png', // Path to your image you placed in the 'static' folder
   },
 
   pathPrefix: '/gatsby-contentful-starter',
   plugins: [
     'gatsby-transformer-remark',
-    'gatsby-transformer-sharp',
     'gatsby-plugin-react-helmet',
+    'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
+    'gatsby-plugin-use-query-params',
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: path.join(__dirname, `static`),
+      },
+    },
     {
       resolve: 'gatsby-source-contentful',
       options: contentfulConfig,

@@ -1,0 +1,11 @@
+.text-primary {
+  color: var(--few-primary);
+}
+
+.text-white {
+  color: var(--few-white);
+}
+
+.text-black {
+  color: var(--few-black);
+}

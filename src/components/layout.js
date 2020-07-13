@@ -1,34 +1,30 @@
 import React from 'react'
-import Helmet from 'react-helmet'
-import base from './base.css'
-import Container from './container'
+import { Helmet } from 'react-helmet'
+import './base.css'
 import SEO from './SEO'
+import Header from './header'
 
-class Template extends React.Component {
-  render() {
-    const { location, children } = this.props
-    let header
-
+export default function Layout (props) {
+    const { location, children } = props
+    
     let rootPath = `/`
     if (typeof __PREFIX_PATHS__ !== `undefined` && __PREFIX_PATHS__) {
       rootPath = __PATH_PREFIX__ + `/`
     }
 
     return (
-      <Container>
+      <div className="page">
         <SEO />
         <Helmet>
-          <link rel="icon" type="image/png" href="fw.png" />
+          <link rel="icon" type="image/png" href="/fw_logo.png" />
           <script
             async
             defer
             src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.2"
           ></script>
         </Helmet>
+        <Header />
         {children}
-      </Container>
+      </div>
     )
   }
-}
-
-export default Template

@@ -1,49 +1,31 @@
 .hero {
-  position: relative;
-  background: #000;
-  color: #fff;
-  text-align: center;
-
-  height: 61.8vh;
-  max-height: 400px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  border-block-end: var(--few-border-1);
+  padding: 2rem 0;
 }
 
-.heroImage {
-  /*
-    Ensure golden ratio for the hero size while limiting it to some extend to
-    the viewport width
-  */
-  height: 61.8vh;
-  max-height: 400px;
+.title {
+  font-weight: 900;
+  font-size: 2rem;
+  line-height: 113%;
+  margin: 0 0 1rem;
 }
 
-.heroDetails {
-  background: rgba(0, 0, 0, 0.7);
-  font-size: 14px;
-  padding: 0 0.5em;
-}
-
-@media (min-width: 600px) {
-  .heroDetails {
-    font-size: 16px;
-  }
-}
-
-@media (min-width: 1000px) {
-  .heroDetails {
-    font-size: 20px;
-  }
-}
-
-.heroHeadline {
+.subtitle {
+  font-size: 1rem;
+  line-height: 120%;
   margin: 0;
 }
 
-.heroTitle {
-  margin: 0;
-  font-size: 1.125em;
-  font-weight: bold;
+@media screen and (min-width: 801px) {
+  .hero {
+    padding: 3.5rem 0;
+  }
+
+  .title {
+    font-size: 3.75rem;
+  }
+
+  .subtitle {
+    font-size: 1.5rem;
+  }
 }
