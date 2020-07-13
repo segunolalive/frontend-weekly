@@ -1,25 +1,38 @@
 import React from 'react'
-import Play from '../../static/Play.svg'
+
+import Container from '../components/common/container'
 
 import styles from './session.module.css'
 
-export default function Session({ slug, title, date, image }) {
+export default function Session({ sessionDate, slides, title, videoUrl }) {
   return (
-    <div
-      className={styles.wrapper}
-      style={{ backgroundImage: `url(${image})` }}
-    >
-      <article className={styles.session}>
-        <time className={styles.time}>{new Date(date).toDateString()}</time>
-        <h3 className={styles.title}>
-          <a href={`/sessions/${slug}`} className={styles.strechedLink}>
-            {title}
-          </a>
-        </h3>
-        {/* <button className={styles.btn}>
-          <img src={Play} alt="" />
-        </button> */}
+    <Container>
+      <article className={styles.wrapper}>
+        <div className={styles.videoContainer}>
+          <div
+            className={`${styles.video} fb-video`}
+            data-href={videoUrl}
+            data-width=""
+            data-show-text="false"
+            data-allowfullscreen="true"
+          />
+        </div>
+
+        <div className={styles.metadata}>
+          <p>{new Date(sessionDate).toDateString()}</p>
+          <h1 className={styles.title}>{title}</h1>
+          {slides && (
+            <a
+              className={styles.slides}
+              href={slides}
+              target="_blank"
+              rel="nofollow noopener"
+            >
+              SLIDES
+            </a>
+          )}
+        </div>
       </article>
-    </div>
+    </Container>
   )
 }

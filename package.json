@@ -7,6 +7,7 @@
     "url": "https://github.com/segunolalive/frontend-weekly/issues"
   },
   "dependencies": {
+    "@reach/dialog": "^0.10.5",
     "gatsby": "^2.21.22",
     "gatsby-image": "^2.4.3",
     "gatsby-plugin-manifest": "^2.4.2",

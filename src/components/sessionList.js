@@ -1,23 +1,39 @@
-import React from 'react'
+import React, { useState } from 'react'
+import '@reach/dialog/styles.css'
 
-import Session from './session'
+import SessionPreview from './sessionPreview'
+import SessionModal from './sessionModal'
 import Container from './common/container'
 
 import styles from './sessionList.module.css'
 
 export default function SessionList({ sessions }) {
+  const [selected, setSelected] = useState(null)
+  const closeModal = () => setSelected(null)
+
   return (
     <Container>
+      <SessionModal sessionProps={selected} close={closeModal} />
       <ul className={styles.sessionList}>
         {sessions.map(({ node }) => {
-          const { title, slug, sessionDate, image = '/fw-video-bg.png' } = node
+          const {
+            videoUrl,
+            slides,
+            title,
+            slug,
+            sessionDate,
+            image = '/fw-video-bg.png',
+          } = node
           return (
             <li key={slug}>
-              <Session
+              <SessionPreview
                 slug={slug}
+                videoUrl={videoUrl}
+                slides={slides}
                 title={title}
                 image={image}
-                date={sessionDate}
+                sessionDate={sessionDate}
+                selectSession={setSelected}
               />
             </li>
           )

@@ -37,6 +37,8 @@ export const pageQuery = graphql`
           slug
           title
           sessionDate
+          videoUrl
+          slides
         }
       }
     }
