@@ -1,5 +1,5 @@
 .sessionList {
-  padding: 3rem 0 4rem;
+  padding: 1.5rem 0 4rem;
   margin: 0;
   list-style: none;
   display: grid;
@@ -10,6 +10,7 @@
 
 @media (min-width: 1024px) {
   .sessionList {
+    padding-top: 3rem;
     grid-gap: 2.5rem;
   }
 }
