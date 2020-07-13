@@ -38,7 +38,7 @@ const SEO = ({ title, description, image, pathname, article }) => (
               <meta property="og:description" content={seo.description} />
             )}
             {seo.image && <meta property="og:image" content={seo.image} />}
-            <meta name="twitter:card" content="summarysummary_large_image" />
+            <meta name="twitter:card" content="summary_large_image" />
             {seo.title && <meta name="twitter:title" content={seo.title} />}
             {seo.description && (
               <meta name="twitter:description" content={seo.description} />
