@@ -16,9 +16,9 @@ export default function Session({ slug, title, date, image }) {
             {title}
           </a>
         </h3>
-        <button className={styles.btn}>
+        {/* <button className={styles.btn}>
           <img src={Play} alt="" />
-        </button>
+        </button> */}
       </article>
     </div>
   )
