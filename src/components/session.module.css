@@ -4,6 +4,10 @@
   border-radius: .5rem;
 }
 
+.noBoder {
+  border: none;
+}
+
 .videoContainer {
   border-radius: inherit;
   overflow: hidden;

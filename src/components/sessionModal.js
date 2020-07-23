@@ -14,7 +14,7 @@ export default function SessionModal({ sessionProps, close }) {
       onDismiss={close}
     >
       <DialogContent aria-label="session modal" className={styles.modalContent}>
-        <Session {...sessionProps} headingLevel={3} />
+        <Session {...sessionProps} headingLevel={3} variant="modal" />
         <button aria-label="close" className={styles.close} onClick={close}>
           <span>&times;</span>
         </button>
