@@ -9,6 +9,20 @@
   overflow: hidden;
 }
 
+.loading {
+  padding: 1rem;
+}
+
+.loaded {
+  composes: sr-only from global;
+}
+
+.loadingError {
+  font-size: 2rem;
+  color: red;
+  padding: 1rem;
+}
+
 .metadata {
   padding: 1.5rem;
   line-height: 1.3;
@@ -35,8 +49,12 @@
     padding: 3rem;
   }
 
-  
   .title {
     font-size: 2.25rem;
   }
+
+  .loadingError {
+    font-size: 3rem;
+  }
 }
+

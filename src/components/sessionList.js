@@ -13,7 +13,7 @@ export default function SessionList({ sessions }) {
 
   return (
     <Container>
-      <SessionModal sessionProps={selected} close={closeModal} />
+      {selected && <SessionModal sessionProps={selected} close={closeModal} /> }
       <ul className={styles.sessionList}>
         {sessions.map(({ node }) => {
           const {

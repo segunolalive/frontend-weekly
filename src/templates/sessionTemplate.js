@@ -6,7 +6,7 @@ import get from 'lodash/get'
 import Footer from '../components/footer'
 import Layout from '../components/layout'
 import Session from '../components/session'
-
+import Container from '../components/common/container'
 
 export default function SessionTemplate({ data, ...props }) {
   const { title } = data.contentfulSession
@@ -17,7 +17,9 @@ export default function SessionTemplate({ data, ...props }) {
   return (
     <Layout location={props.location}>
       <Helmet title={pageTitle} />
-      <Session {...data.contentfulSession} />
+      <Container>
+        <Session {...data.contentfulSession} />
+      </Container>
       <Footer />
     </Layout>
   )

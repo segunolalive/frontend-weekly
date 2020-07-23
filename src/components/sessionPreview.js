@@ -23,11 +23,11 @@ export default function sessionPreview({
     >
       <article className={styles.session}>
         <time className={styles.time}>{new Date(sessionDate).toDateString()}</time>
-        <h3 className={styles.title}>
+        <h2 className={styles.title}>
           <Link to={`/sessions/${slug}`} className={styles.strechedLink}>
             {title}
           </Link>
-        </h3>
+        </h2>
         <button className={styles.btn} onClick={onButtonClick}>
           <img src={Play} alt="" />
         </button>
