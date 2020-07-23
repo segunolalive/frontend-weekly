@@ -1,6 +1,6 @@
 import React from 'react'
 import { Helmet } from 'react-helmet'
-import './base.css'
+import '../styles/base.css'
 import SEO from './SEO'
 import Header from './header'
 
