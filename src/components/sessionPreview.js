@@ -22,13 +22,13 @@ export default function sessionPreview({
       style={{ backgroundImage: `url(${image})` }}
     >
       <article className={styles.session}>
-        <time className={styles.time}>{new Date(sessionDate).toDateString()}</time>
-        <h2 className={styles.title}>
+        <h3 className={styles.title}>
           <Link to={`/sessions/${slug}`} className={styles.strechedLink}>
             {title}
           </Link>
-        </h2>
-        <button className={styles.btn} onClick={onButtonClick}>
+        </h3>
+        <time className={styles.time}>{new Date(sessionDate).toDateString()}</time>
+        <button className={styles.btn} onClick={onButtonClick} aria-label="play">
           <img src={Play} alt="" />
         </button>
       </article>

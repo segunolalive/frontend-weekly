@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useCallback } from 'react'
 import '@reach/dialog/styles.css'
 
 import SessionPreview from './sessionPreview'
@@ -9,11 +9,11 @@ import styles from './sessionList.module.css'
 
 export default function SessionList({ sessions }) {
   const [selected, setSelected] = useState(null)
-  const closeModal = () => setSelected(null)
+  const closeModal = useCallback(() => setSelected(null), [selected])
 
   return (
     <Container>
-      {selected && <SessionModal sessionProps={selected} close={closeModal} /> }
+      <h2 className="sr-only">All Sessions</h2>
       <ul className={styles.sessionList}>
         {sessions.map(({ node }) => {
           const {
@@ -39,6 +39,7 @@ export default function SessionList({ sessions }) {
           )
         })}
       </ul>
+      {selected && <SessionModal sessionProps={selected} close={closeModal} /> }
     </Container>
   )
 }
