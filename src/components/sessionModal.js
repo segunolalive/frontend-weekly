@@ -13,12 +13,11 @@ export default function SessionModal({ sessionProps, close }) {
       isOpen={Boolean(sessionProps)}
       onDismiss={close}
     >
-      <DialogContent
-        aria-label="session modal"
-        className={styles.modalContent}
-      >
+      <DialogContent aria-label="session modal" className={styles.modalContent}>
         <Session {...sessionProps} headingLevel={3} />
-        <button aria-label="close" className={styles.close} onClick={close}>&times;</button>
+        <button aria-label="close" className={styles.close} onClick={close}>
+          <span>&times;</span>
+        </button>
       </DialogContent>
     </DialogOverlay>
   )

@@ -1,8 +1,6 @@
 import React, { useState, useMemo } from 'react'
 import FBPlayer from 'react-facebook-player'
 
-import Container from '../components/common/container'
-
 import styles from './session.module.css'
 
 export default function Session({
