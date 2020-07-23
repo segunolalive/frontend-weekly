@@ -1,6 +1,6 @@
 import React from 'react'
 import { Helmet } from 'react-helmet'
-import './base.css'
+import '../styles/base.css'
 import SEO from './SEO'
 import Header from './header'
 
@@ -17,11 +17,6 @@ export default function Layout (props) {
         <SEO />
         <Helmet>
           <link rel="icon" type="image/png" href="/fw_logo.png" />
-          <script
-            async
-            defer
-            src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.2"
-          ></script>
         </Helmet>
         <Header />
         {children}
