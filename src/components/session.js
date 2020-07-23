@@ -4,7 +4,13 @@ import FBPlayer from 'react-facebook-player'
 import styles from './session.module.css'
 
 const VARIANTS = {
-  MODAL: 'modal'
+  MODAL: 'modal',
+}
+
+const VIDEO_STATUSES = {
+  LOADING: 'loading',
+  LOADED: 'loaded',
+  ERROR: 'error',
 }
 
 export default function Session({
@@ -18,15 +24,6 @@ export default function Session({
   const videoId = videoUrl.split('/')[5]
   const Heading = `h${headingLevel}`
 
-  const VIDEO_STATUSES = useMemo(
-    () => ({
-      LOADING: 'loading',
-      LOADED: 'loaded',
-      ERROR: 'error',
-    }),
-    []
-  )
-
   const [status, setStatus] = useState(VIDEO_STATUSES.LOADING)
 
   return (
@@ -35,15 +32,7 @@ export default function Session({
         variant === VARIANTS.MODAL ? styles.noBoder : ''
       }`}
     >
-      {status === VIDEO_STATUSES.LOADING && (
-        <div className={styles.loading}>...Loading Video</div>
-      )}
-      {status === VIDEO_STATUSES.LOADED && (
-        <div className={styles.loaded}>Video Loaded</div>
-      )}
-      {status === VIDEO_STATUSES.ERROR && (
-        <div className={styles.loadingError}>Error! Failed To Video</div>
-      )}
+      <VideoStatus status={status} />
       <div className={styles.videoContainer}>
         <FBPlayer
           appId="583596218936079"
@@ -71,5 +60,21 @@ export default function Session({
         )}
       </div>
     </article>
+  )
+}
+
+function VideoStatus({ status }) {
+  return (
+    <div aria-live="assertive">
+      {status === VIDEO_STATUSES.LOADING && (
+        <span className={styles.loading}>...Loading Video</span>
+      )}
+      {status === VIDEO_STATUSES.LOADED && (
+        <span className={styles.loaded}>Video Loaded</span>
+      )}
+      {status === VIDEO_STATUSES.ERROR && (
+        <span className={styles.loadingError}>Error! Failed To Video</span>
+      )}
+    </div>
   )
 }
