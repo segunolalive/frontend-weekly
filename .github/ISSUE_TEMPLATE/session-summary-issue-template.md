@@ -1,7 +1,7 @@
 ---
 name: Session Summary Issue Template
 about: Issue template for Frontend-weekly session summaries
-title: Add a summary for [session title](frontend-weekly session url)
+title: Add a summary for [session title]
 labels: ''
 assignees: ''
 
