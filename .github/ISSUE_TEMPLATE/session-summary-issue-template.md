@@ -10,4 +10,6 @@ assignees: ''
 Add a summary for [session title](frontend-weekly session url).
 
 ## Note
-- We prefer video summaries to be 2 or 3 paragraphs long. Summaries could be longer unless if absolutely necessary. You should add a bullet list of things the viewer will learn at the end.
+- We prefer video summaries to be 2 or 3 paragraphs long. Summaries could be longer if absolutely necessary. You should add a bullet list of things the viewer will learn at the end.
+- Summaries should be submitted in markdown.
+- Summary files should be named with the session slug e.g The slug for the [Design Systems Part 2](https://frontendweekly.dev/sessions/design-systems-part-2) video is `design-systems-part-2`, so the summary file for that session should be named `design-systems-part-2.md`
