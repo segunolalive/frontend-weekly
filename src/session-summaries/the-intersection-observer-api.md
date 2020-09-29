@@ -1,11 +1,12 @@
-## Intersection Observer Api
-
 ----
 hosts: Segun Ola, Valentino Ugbala
-Guests: Inumidun Amao
+guests: 
 summarized_by: Chimdia Anyiam
 summarized_by_social_media: https://twitter.com/AnyiamChimdia
 ----
+# Intersection Observer Api
+
+
 
 This Video introduces the basics of the **Intersection Observer API** and what it can be used for while taking the user through real world examples which were explained carefully. The Intersection Observer API watches an element based on some options passed to it during instantiation and calls the callback function also passed to it on instantiation when certain conditions are met.
 
