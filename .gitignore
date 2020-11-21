@@ -68,7 +68,7 @@ public
 .env*
 !.env.example
 
-.idea
+.idea/
 
 
 # editor
