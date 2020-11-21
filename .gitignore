@@ -68,6 +68,8 @@ public
 .env*
 !.env.example
 
+.idea
+
 
 # editor
 .vscode/
