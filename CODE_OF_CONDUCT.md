@@ -51,3 +51,4 @@ In the interest of fostering an open and welcoming environment, we pledge to mak
 **We hold the right and responsibility to remove comments or other contributions that are not aligned to this Code of Conduct, or to ban temporarily or permanently any members for other behaviours that they deem inappropriate, threatening, offensive, or harmful.**
 
 ### **In the meantime, be kind, compassionate, patient and respectful to everyone here**
+
